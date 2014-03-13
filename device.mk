@@ -40,6 +40,9 @@ PRODUCT_COPY_FILES += \
     device/lge/hammerhead/fstab.hammerhead:root/fstab.hammerhead \
     device/lge/hammerhead/ueventd.hammerhead.rc:root/ueventd.hammerhead.rc
 
+PRODUCT_COPY_FILES += \
+    $(foreach module, $(wildcard device/lge/hammerhead-kernel/modules/*.ko), $(module):system/lib/modules/$(notdir $(module)))
+
 # Input device files for hammerhead
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
@@ -230,7 +233,8 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 PRODUCT_PACKAGES += \
-    bdAddrLoader
+    bdAddrLoader \
+    brcm_patchram_plus
 
 PRODUCT_PACKAGES += \
     power.hammerhead
