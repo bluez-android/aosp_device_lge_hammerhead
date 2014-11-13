@@ -151,3 +151,12 @@
 
 # Thermal engine
 /dev/msm_thermal_query            u:object_r:thermal_engine_device:s0
+
+# Bluetooth hciattach
+/system/bin/hciattach             u:object_r:hci_attach_exec:s0
+/system/bin/brcm_patchram_plus    u:object_r:hci_attach_exec:s0
+
+# Bluetooth daemon
+/system/bin/bluetoothd             u:object_r:bluetoothd_exec:s0
+/system/bin/bluetoothd-main        u:object_r:bluetoothd_exec:s0
+/system/bin/bluetoothd-snoop       u:object_r:bluetoothd_exec:s0
