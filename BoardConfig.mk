@@ -138,9 +138,7 @@ BOARD_SEPOLICY_UNION += \
        wpa.te \
        file_contexts \
        genfs_contexts \
-       te_macros \
-       init.te \
-       bluetoothd.te
+       te_macros
 
 HAVE_ADRENO_SOURCE:= false
 

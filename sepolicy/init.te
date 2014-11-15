@@ -1,2 +1,0 @@
-# Grant module loading
-allow init self:capability sys_module;
