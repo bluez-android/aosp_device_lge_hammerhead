@@ -359,6 +359,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.input.noresample=1
 
+# Enable Handsfree profile
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.bluetooth.handsfree=hfp
+
 # Modem debugger
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
